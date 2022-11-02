@@ -2,7 +2,7 @@ import '../styles/tasklist.css';
 // icons
 import { Trash2 } from 'react-feather';
 
-const TaskList = ({ todo, handleComplete }) => {
+const TaskList = ({ todo, handleComplete, handleDelete }) => {
   return (
     <div id="tasks">
       <div id="task">
@@ -21,7 +21,7 @@ const TaskList = ({ todo, handleComplete }) => {
         </p>
       </div>
       <div id="task-delete">
-        <button>
+        <button onClick={() => handleDelete(todo.id)}>
           <Trash2 />
         </button>
       </div>
