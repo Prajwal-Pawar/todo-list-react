@@ -1,20 +1,24 @@
 #tasks {
   display: flex;
-  /* justify-content: center; */
+  justify-content: space-between;
   padding: 0px 20px;
   border: 1px solid black;
   border-radius: 10px;
   width: 40%;
-  margin: 20px auto;
-  /* justify-content: space-between; */
+  margin: 10px auto;
 }
 
-#tasks p {
-  font-size: 1.2rem;
+#task {
+  display: flex;
+}
+
+#task p {
+  font-size: 1.3rem;
   padding: 0px 10px;
-  margin: 5px 0px;
+  margin: 5px;
 }
 
-#tasks button {
+#task-delete {
+  display: flex;
   margin: 10px 0px;
 }
