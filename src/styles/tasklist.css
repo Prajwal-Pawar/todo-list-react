@@ -22,3 +22,7 @@
   display: flex;
   margin: 10px 0px;
 }
+
+.task-complete {
+  text-decoration: line-through;
+}
