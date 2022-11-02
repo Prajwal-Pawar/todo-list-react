@@ -1,0 +1,23 @@
+#title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#task-inputs {
+  text-align: center;
+}
+
+#task-inputs input {
+  padding: 10px;
+  width: 30%;
+}
+
+#task-inputs button {
+  padding: 10px;
+  width: 10%;
+}
+
+#total-tasks {
+  text-align: center;
+  font-size: 1.3rem;
+}

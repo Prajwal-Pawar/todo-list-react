@@ -1,7 +1,25 @@
+import { useState } from 'react';
+import '../styles/App.css';
+import TaskList from './TaskList';
+
 function App() {
+  // hooks
+  const [todos, setTodos] = useState(['asd', 'asd', 'asd']);
+
   return (
-    <div className="App">
-      <h1>Hello TODO</h1>
+    <div>
+      <h1 id="title">Todo List</h1>
+      <div id="task-inputs">
+        <input type="text" placeholder="What do you want to do ?" />
+        <button>Add</button>
+      </div>
+
+      <p id="total-tasks">You have 3 tasks</p>
+
+      {/* Tasklist */}
+      {todos.map((todo, index) => (
+        <TaskList key={index} todo={todo} />
+      ))}
     </div>
   );
 }
