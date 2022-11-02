@@ -4,7 +4,9 @@
 }
 
 #task-inputs {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 #task-inputs input {
@@ -13,7 +15,7 @@
 }
 
 #task-inputs button {
-  padding: 10px;
+  padding: 5px;
   width: 10%;
 }
 

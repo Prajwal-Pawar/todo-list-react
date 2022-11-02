@@ -11,5 +11,6 @@
 ---
 
 - Used Libs:
+  1. react-feather : for Icons
 
 ---

@@ -1,4 +1,6 @@
 import '../styles/tasklist.css';
+// icons
+import { Trash2 } from 'react-feather';
 
 const TaskList = ({ todo }) => {
   return (
@@ -8,7 +10,9 @@ const TaskList = ({ todo }) => {
         <p>{todo}</p>
       </div>
       <div id="task-delete">
-        <button>Remove</button>
+        <button>
+          <Trash2 />
+        </button>
       </div>
     </div>
   );
