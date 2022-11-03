@@ -12,11 +12,24 @@
 #task-inputs input {
   padding: 10px;
   width: 30%;
+  font-size: 1rem;
+  border-radius: 10px 0px 0px 10px;
 }
 
 #task-inputs button {
   padding: 5px;
   width: 10%;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #2f3542;
+  color: #bdc3c7;
+  transition: 0.2s ease-in-out;
+}
+
+#task-inputs button:hover {
+  cursor: pointer;
+  background-color: #788499;
+  color: #000;
 }
 
 #total-tasks {

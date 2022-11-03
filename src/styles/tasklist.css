@@ -2,14 +2,25 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 20px;
-  border: 1px solid black;
+  border: 1px solid #95a5a6;
   border-radius: 10px;
   width: 40%;
   margin: 10px auto;
+  transition: 0.2s ease-in-out;
+}
+
+#tasks:hover {
+  cursor: pointer;
+  border: 1px solid #bdc3c7;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #task {
   display: flex;
+}
+
+#task input {
+  padding: 0px;
 }
 
 #task p {
@@ -23,6 +34,29 @@
   margin: 10px 0px;
 }
 
+#task-delete button {
+  border: none;
+  background: transparent;
+  color: red;
+  transition: 0.2s ease-in-out;
+}
+
+#task-delete button:hover {
+  cursor: pointer;
+}
+
 .task-complete {
   text-decoration: line-through;
+}
+
+#tasks-list-complete {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  border: 1px solid #95a5a6;
+  border-radius: 10px;
+  width: 40%;
+  margin: 10px auto;
+  transition: 0.2s ease-in-out;
+  background-color: #cfdfe0;
 }

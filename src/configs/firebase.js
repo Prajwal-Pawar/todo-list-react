@@ -3,12 +3,12 @@ import 'firebase/compat/firestore';
 
 // firebase configs
 const firebaseConfig = {
-  apiKey: 'AIzaSyBNNBUo8pL4Uow3hF3Q_xiQmpnjsQp4cPs',
-  authDomain: 'to-do-react-975ff.firebaseapp.com',
-  projectId: 'to-do-react-975ff',
-  storageBucket: 'to-do-react-975ff.appspot.com',
-  messagingSenderId: '792708285646',
-  appId: '1:792708285646:web:697fe65e19a56545e3bc9f',
+  apiKey: 'AIzaSyAE54gHTKrylTtbX7jsNKySuFQzmJBgdRI',
+  authDomain: 'to-do-react-3c855.firebaseapp.com',
+  projectId: 'to-do-react-3c855',
+  storageBucket: 'to-do-react-3c855.appspot.com',
+  messagingSenderId: '126889375973',
+  appId: '1:126889375973:web:13b2d111f980cbbf58bc0c',
 };
 
 // Initialize Firebase

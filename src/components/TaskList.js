@@ -4,7 +4,8 @@ import { Trash2 } from 'react-feather';
 
 const TaskList = ({ todo, handleComplete, handleDelete }) => {
   return (
-    <div id="tasks">
+    // if task is completed trigger id tasks-list-complete
+    <div id={todo.completed ? 'tasks-list-complete' : 'tasks'}>
       <div id="task">
         <input
           onChange={() => handleComplete(todo)}

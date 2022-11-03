@@ -36,9 +36,6 @@ function App() {
       .get()
       .then((snapshot) => {
         const todo = snapshot.docs.map((doc) => {
-          // let todoList = [];
-          // todoList.push({ id: doc.id, ...doc.data() });
-
           return {
             // doc id
             id: doc.id,
