@@ -12,5 +12,6 @@
 
 - Used Libs:
   1. react-feather : for Icons
+  2. react-hot-toast : for notifications
 
 ---

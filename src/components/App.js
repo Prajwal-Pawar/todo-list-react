@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 // icons
 import { Plus } from 'react-feather';
+import { Toaster, toast } from 'react-hot-toast';
 import '../styles/App.css';
 import TaskList from './TaskList';
 import { firestore } from '../configs/firebase';
@@ -21,10 +22,20 @@ function App() {
       return;
     }
 
-    await firestore.collection('todos').add({
-      task: taskInput,
-      completed: false,
-    });
+    await firestore
+      .collection('todos')
+      .add({
+        task: taskInput,
+        completed: false,
+      })
+      .then(() => {
+        console.log('Task successfully created!');
+        // notification
+        toast.success('Task added successfully !');
+      })
+      .catch((error) => {
+        console.log('Error creating Task: ', error);
+      });
 
     setTaskInput('');
   };
@@ -50,10 +61,25 @@ function App() {
 
   // update todo in firebase
   const handleComplete = async (todo) => {
-    await firestore.collection('todos').doc(todo.id).update({
-      // toggling the boolean value (if true then false, if false then true)
-      completed: !todo.completed,
-    });
+    await firestore
+      .collection('todos')
+      .doc(todo.id)
+      .update({
+        // toggling the boolean value (if true then false, if false then true)
+        completed: !todo.completed,
+      })
+      .then(() => {
+        if (todo.completed === false) {
+          console.log('Task successfully updated!');
+          // notification
+          toast.success('Task completed !');
+        } else {
+          console.log('Task successfully updated!');
+        }
+      })
+      .catch((error) => {
+        console.log('Error updating Task: ', error);
+      });
   };
 
   // delete todo from firebase
@@ -64,6 +90,8 @@ function App() {
       .delete()
       .then(() => {
         console.log('Task successfully deleted!');
+        // notification
+        toast.success('Task deleted successfully !');
       })
       .catch((error) => {
         console.log('Error removing Task: ', error);
@@ -72,6 +100,11 @@ function App() {
 
   return (
     <div>
+      {/* rendering notifications */}
+      <div>
+        <Toaster />
+      </div>
+
       <h1 id="title">Todo List</h1>
       <form onSubmit={createTodo} id="task-inputs">
         <input
